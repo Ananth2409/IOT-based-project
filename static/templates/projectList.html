@@ -1,0 +1,128 @@
+
+<!--<div class="app-body" ng-controller="projectCtrl" ng-init="list()">
+  <div class="container-fluid">
+    <div class="animated fadeIn">
+    
+      <p class="add_proj"><button class="btn" ng-click="clickToOpen()"><i class="fa fa-plus" ></i></button> Add Project</p>  
+      <div class="row" >
+        <div class="col-sm-6 col-lg-3" ng-repeat = "x in projectList">
+          <div class="card text-white bg-primary">
+            <div class="card-body pb-10">
+              <div style="height:70">            
+                  <span >{$ x.project_name $}</span>
+                  <button class="btn btn-transparent dropdown-toggle p-0 " style="float:right;color:black" type="button"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+                    <i class="icon-settings"></i>
+                  </button>
+                  <div class="dropdown-menu dropdown-menu-right">
+                    <a class="dropdown-item" ui-sref="mimicCreate({int:x.id})">Edit</a>
+                  </div>
+                
+              </div>
+          
+            </div>
+      
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    </div>
+  </div>
+</div>
+-->  
+
+<div class="app-body" ng-controller="projectCtrl" ng-init="list();" >
+  <div class="container-fluid">
+    <div class="animated fadeIn" >
+      <p class="add_proj">
+     <!--  <button class="btn btn-secondary mb-1" data-toggle="modal" data-target="#smallModal" ><i class="fa fa-plus" ></i></button> Add Project</p> -->
+     <button class="btn btn-secondary mb-1" ng-click="openModal()" ><i class="fa fa-plus" ></i></button> Add Project</p>
+      </p>  
+      <div class="row">
+        <div class="col-sm-6 col-lg-3" ng-repeat="x in projectList">
+            <div class="card text-white bg-primary" >
+              <div class="card-body pb-0" >
+                <div class="btn-group float-right">
+                  <button class="btn btn-transparent dropdown-toggle p-0" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="icon-settings"></i>
+                  </button>
+                  <div class="dropdown-menu dropdown-menu-right" x-placement="bottom-end" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(31px, 23px, 0px);">
+                  <button class="dropdown-item"  ng-click ="openModal(x.id)">Edit</button>
+             <!--     <a class="dropdown-item" data-toggle="modal" data-target="#confirmDelete" >Delete</a> -->
+                  <button class="dropdown-item" ng-click="test(x.id)" >Delete</button>
+                  <a class="dropdown-item" ui-sref="mimicCreate({int:x.id})">Mimic Screen</a>
+                  </div>
+                </div>
+                <div class="text-value" >{$ x.project_name $}</div>
+                <div>{$ x.description $}</div>
+              </div>
+              <div class="chart-wrapper mt-3 mx-3" style="height:70px;">
+                <div class="chartjs-size-monitor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;">
+                <div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">
+                <div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
+                <canvas class="chart chartjs-render-monitor" id="card-chart1" height="70" width="208" style="display: block;"></canvas>
+                <div id="card-chart1-tooltip" class="chartjs-tooltip top bottom" style="opacity: 0; left: 186.558px; top: 123.889px;"><div class="tooltip-header"><div class="tooltip-header-item">June</div></div><div class="tooltip-body"><div class="tooltip-body-item"><span class="tooltip-body-item-color" style="background-color: rgb(0, 165, 224);"></span><span class="tooltip-body-item-label">My First dataset</span><span class="tooltip-body-item-value">55</span></div></div></div>
+              </div>
+            </div>
+           
+        </div>
+          <div class="modal fade in show " id="confirmDelete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-auto" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4>Confirm Delete</h4>
+                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    </div>
+
+                    <div class="modal-body">
+                        <p>Are you sure want to delete this ?</p>
+                    </div>
+
+                    <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">No</button>
+                    <button  class="btn btn-primary"  type="button"  ng-click="delete(x.id)">Yes</button>
+                    </div>
+                </div>
+              </div>
+          </div>
+        <div class="modal fade in show" id="smallModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
+            <div class="modal-dialog modal-auto" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                          <h4 class="modal-title">Add Project</h4>
+                          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                          </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class = "form-group row">
+                            <label class="col-md-3 col-form-label" for = "Project Name"  >Project Name  </label>
+                            <div class="col-md-7">
+                                <input type = "text" class="form-control" placeholder = "Project Name" ng-model = "project.project_name" ng-blur="dialogClose(project.project_name)" required="" >
+                                <p style="color:red">{$ project.validateProject $}</p>
+                            </div>
+                        </div>
+                        <div class = "form-group row">
+                            <label class="col-md-3 col-form-label" for = "Description"  >Description  </label>
+                            <div class="col-md-7">
+                                <input type="text"class="form-control"   placeholder="Description" ng-model="project.description">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" id="clos" type="button" data-dismiss="modal">Close</button>
+                        <button  class="btn btn-primary"  type="button" ng-click="savePost()">Create</button>
+                    </div>
+                </div>          
+            </div>            
+        </div>
+      </div>
+    </div> 
+  </div>
+</div>
+
+
+
+  
+    
+ 

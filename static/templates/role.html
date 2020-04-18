@@ -1,0 +1,21 @@
+                <div class="col-md-12"  ng-controller="roleCtrl" ng-init="rolevalue()"  >
+                    
+                    <div class="card">
+                      <div class="card-header">
+                        <strong>Roles</strong></div>
+                      <div class="card-body">
+                        <form class="form-horizontal" action="" method="post">
+
+                              <div class = "form-group row">
+                                <label class="col-md-3 col-form-label" for = "role_name"  >Add role  </label>
+                                <div class="col-md-9">
+                                <input type = "text"  class = "form-control" placeholder = "Create role" ng-model = "role.name" required="">
+                              </div>
+                              </div>
+
+                               <br>
+                        <input type="button" class="btn btn-primary" ng-click="submit()"  value="Add">
+                    </div>
+                </div>
+                        </form>
+                      </div>

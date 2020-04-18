@@ -1,0 +1,481 @@
+*{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.image-editoptions li {
+    padding: 5px;
+    position: relative;
+    vertical-align: top;
+}
+.image-editoptions li.selected{
+    background: #bdbdbd;
+}
+
+.image-editoptions li a span.inline-align.center {
+    background: url(../images/jquery-te.png) repeat;
+    background-position: 175px -2px;
+}
+.image-editoptions li a span.inline-align.left {
+    background: url(../images/jquery-te.png) repeat;
+    background-position: 197px -2px;
+}
+.image-editoptions li a span.inline-align.right {
+    background: url(../images/jquery-te.png) repeat;
+    background-position: 154px -2px;
+}
+.created-whiteboards {
+    padding: 30px 0px;
+    height: 100%;
+    vertical-align: middle;
+    margin: 0 58px;
+}
+.tools-more{
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-top: 5px solid #929292;
+    position: absolute;
+    right: 4px;
+    top: 5px;
+}
+.polygon-btns{
+    width: 30px;
+    float: left;
+    margin-left: 15px;
+    margin-bottom: 15px !important;
+}
+span.inline-editpoints
+{
+    background: url(../images/whiteboard-crop.png) no-repeat;
+    background-position: 4px 8px;
+}
+span.inline-editText
+{
+    background: url(../images/player-icon.png) no-repeat;
+    /*background-position: -240px 7px;
+    background-size: 516px 38px;*/
+	background-position: -238px 7px;
+	background-size: 530px 38px;
+}
+.closeoverlay{
+    width: 20px;
+    height: 20px;
+    z-index: 9999999999;
+    position: absolute;
+    top: -15px;
+    right: 0;
+}
+.button9.polygon-btns{
+    background: #1a6ab1;
+    border:0px;
+}
+.action-icons-whiteboard li.selected a span{
+    opacity: 1 !important;
+}
+.created-whiteboards canvas{
+    background: #fff;
+}
+#text-editor, #text-editor-tools {
+    display: none;
+    z-index: 5;
+    position: absolute;
+}
+
+#text-editor textarea {
+    padding: 6px;
+    overflow: hidden;
+    resize: none;
+    line-height: 125%;
+
+    /* to prevent automatic line-breaks */
+    white-space: pre;
+    overflow-x: hidden;
+}
+
+#text-editor-tools {
+    float: left;
+    opacity: 0.90;
+    background-size: 100%;
+    background-position: top left;
+}
+
+#text-editor.active, #text-editor-tools.active {
+    display: block;
+}
+
+#text-editor-tools .line, #text-editor .textLine {
+    float: left;
+    margin-right: 1px;
+}
+
+#text-editor-tools .line select {
+    float: left;
+}
+
+#text-editor .label, #text-editor-tools .label {
+    display: none;
+}
+
+#text-editor-tools .color_picker {
+    margin-top: 2px;
+}
+
+#text-editor-tools .button-checker {
+    text-decoration: underline;
+    padding: 0px 4px;
+    margin: 1px;
+    cursor: pointer;
+}
+
+#text-editor-tools .button-checker[button-checked="true"] {
+    border-style: inset;
+}
+
+.mCSB_horizontal.mCSB_inside > .mCSB_container {
+    margin-right: 0;
+    margin-bottom: 0px !important; 
+    padding-top: 50px;
+}
+
+/*.action-icons-bg .mCustomScrollBox {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    max-width: 100%;
+    outline: none;
+    direction: ltr;
+    height: 100px !important;
+    bottom: 50px !important;
+}*/
+
+.action-icons-bg{
+    left: 0;
+    right: 0; 
+}
+.notification
+{
+    z-index: 9999;
+}
+
+.whiteboard-gallery .subject-ellabration li a img.loader{
+    max-width: 174px;
+    max-height: 108px;
+    margin-left: 0;
+    margin-top: 0;
+}
+.whiteboard-gallery .subject-ellabration li a img{
+    max-width: 52px;
+    max-height: 52px;
+    display: inline-block;
+}
+.whiteboard-gallery .subject-ellabration li {
+    width: 33%;
+    height: 79px;
+    float: left;
+    padding: 5px 10px;
+    opacity:1;
+}
+.whiteboard-gallery .subject-ellabration li a {
+    display: block;
+    color: #333;
+    line-height: 15px;
+    font-size: 12px;
+    padding: 0px;
+    height: 100%;
+    text-align: center;    
+}
+.mainpagetitle.whiteboardTitle,.tile-subtitles.whiteboardTitle li:first-child
+{
+    color: #fff !important;
+    font-weight: bold !important;    
+}
+.tile-subtitles.whiteboardTitle > li{
+    color: #fff !important;
+    font-weight: bold !important; 
+}
+.tile-subtitles.whiteboardTitle > li:after {
+    content: "";
+    position: absolute;
+    bottom: 3px;
+    right: -3px;
+    width: 2px;
+    height: 2px;
+    display: block;
+    background: none !important;
+}
+
+.image-inlineoptions span.inline-angle {
+    background-position: -143px 7px;
+}
+.action-icons-whiteboard li a span.export {
+    background-position: -50px -23px;
+}
+.whiteboard-layer li span.mirror {
+    background-position: -63px 0px;
+    float: right;
+    cursor: pointer;
+    margin-top: 5px;
+}
+.whiteboard-layer li span.duplicate {
+    background-position: -85px 0px;
+    float: right;
+    cursor: pointer;
+    margin-top: 5px;
+}
+.whiteboard-pens i.color-more {
+    width: 7px;
+    height: 7px;
+    position: absolute;
+    background: transparent url(../images/color-more.png) no-repeat;
+    display: block;
+    top: 17px;
+    right: 7px;
+}
+.whiteboard-pens span.colorSelector {
+    width: 25px !important;
+    height: 16px !important;
+    border: 1px solid #707782 !important;
+    background: none !important;
+    padding: 1px !important;
+}
+.whiteboard-pens span.customColor {
+    height: 12px  !important;
+    width: 21px !important;
+}
+.whiteboard-pens{
+    width: 360px;
+}
+.whiteboard-pens.whiteboard-pens-highlight{
+    width: 260px;
+}
+.whiteboard-layer {
+    width: 205px;
+    height: 330px;
+    overflow: auto;
+}
+#myID [data-tooltip]:before {
+    position: absolute;
+    top: 100%;
+    left: 150%;
+    margin: -65px 0 5px -80px !important;
+    padding: 7px;
+    white-space: nowrap;
+    -webkit-border-radius: 3px;
+}
+.action-icons-whiteboard .whiteboard-change-flyout a {
+    display: inline-block;
+    padding: 13px 6px;
+    margin: 0;
+    font-size: 12px;
+    color: #fff !important;
+    font-weight: bold;
+}
+.whiteboard-gallery .subject-ellabration li a.delete-gallery.true{
+    display: inline-block;
+}
+.whiteboard-gallery .subject-ellabration li a.delete-gallery
+{
+    display: none;
+    position: absolute;
+    right: 10px;
+    line-height: 12px;
+    color: red !important;
+    font-size: 10px;
+    z-index: 99;
+    padding: 2px;
+    background: #333 url(../images/whiteboard-layer.png) no-repeat;
+    width: 20px;
+    height: 20px;
+    opacity: 1;
+    vertical-align: middle;
+    text-align: left;
+    background-position: -20px 0px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+.whiteboard_responsive{
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 530px;
+    overflow: auto;
+    user-select: none;
+user-select: auto;
+user-select: text;
+user-select: contain;
+user-select: all;
+
+-moz-user-select: none;
+-moz-user-select: text;
+-moz-user-select: all;
+
+-webkit-user-select: none;
+-webkit-user-select: text;
+-webkit-user-select: all; /* does not work in Safari, use only "none" or "text", or else it will allow to type in the html container*/
+
+-ms-user-select: none;
+-ms-user-select: text;
+-ms-user-select: element;
+}
+
+.whiteboard_vscroll .mCSB_scrollTools{
+    visibility: hidden !important;
+}
+ul.right_ul_btns {
+    display: inline-block;
+    width: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+ul.right_ul_btns li {
+    display: inline-block;
+}
+
+ul.right_ul_btns li > button {
+    display: inline-block;
+    height: 100%;
+    padding: 7px;
+    margin: 0;
+    border: 0px;
+    border-radius: 0px;
+    color: #ddd;
+    background: #262626;
+    font-size: 12px;
+    width: 25px;    
+}
+
+ul.right_ul_btns li > button.active {
+    color: #fff;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 4px;    
+}
+ul.right_ul_btns li > button.right_btn
+{
+    background-color: #242425;
+    color: rgb(255, 255, 255);
+    padding: 10px 5px;
+    border: 1px solid rgb(29, 29, 29);
+}
+img.page_arr {
+    display: inline-block;
+    width: 9px;
+}
+.button_txt{
+    width: 15px;
+    height: 8px;
+    display: block;
+    
+}
+.button_txt.up_arr{
+    background: url(../images/up_arr.png) no-repeat;
+    background-size: contain;
+}
+.button_txt.down_arr{
+    background: url(../images/down_arr.png) no-repeat;
+    background-size: contain;
+}
+.disabled .button_txt{
+    opacity: 0.1;
+}
+
+
+/*Custom r*/
+.whiteboard-gallery{ width: 680px; left: -240px !important;}
+.subject-list{ width:194px;height:260px; overflow:auto; float:left;position: relative;overflow-x: hidden !important;}
+.whiteboard-gallery .subject-ellabration{ width:70%; float: left;background:#fff;}
+.whiteboard-gallery .upload_fixed_btn {
+    width: 100%;
+    height: auto;
+    left: 0;
+    bottom: 0;
+    background-color: #1A6AB1;
+    position: absolute;
+    z-index: 9;
+    display: inline-block;
+    padding: 14px 5px;
+    text-align: center;
+    font-family: 'open_sansregular', sans-serif;
+}
+.flyBoard_searchBar
+{
+    display: inline-block;
+    float: right;
+    width: auto;
+    background: #fff;
+}
+.flyBoard_searchBar .search_icon
+{
+    padding: 10px;
+    background: url(../images/magnify.png) no-repeat;
+    background-size: 22px;
+    background-repeat: no-repeat;
+    background-color: #000;
+    float: right;
+    display: inline-block;
+    width: 20px;
+    margin: 0;
+    border: 0;
+    border-radius: 0;
+}
+input.search_text {
+    display: inline-block;
+    float: left;
+    width: 130px;
+    height: 20px;
+    margin: 0;
+    font-size: 12px;
+    border-radius: 0;
+}
+.fly_arrow {
+    position: absolute;
+    left: 0;
+    top: -20px;
+    padding: 0;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid #2f3338;
+}
+.action-icons-whiteboard {
+    margin: 5px 0;
+    position: relative;
+}
+/*.action-icons-whiteboard .whiteboard-change-flyout:not(.vscroll):before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    bottom: -15px;
+    padding: 0;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid #2f3338;
+}*/
+.action-icons-whiteboard .whiteboard-change-flyout {
+    position: absolute;
+    /*bottom: 60px;*/
+    top: auto;
+    bottom: 108%;
+    left: 0;
+    padding: 1px;
+    background: #262626;
+    display: none;
+    overflow: visible;    
+}
+.subject-list.upload_rel_cont {
+    width: 30%;
+    height: 100%;
+}
+.whiteboard-change-flyout.vscroll.whiteboard-layer.black-flyout {
+    overflow: auto;
+    bottom: 112%;
+    top: auto;
+}

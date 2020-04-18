@@ -1,0 +1,111 @@
+
+
+<div class="col-md-12"  ng-controller="tagCtrl" ng-init="tagIdCheck();getTagType()"  >
+    <div class="card">
+        <div class="card-header">
+            <strong>Tag</strong> Form
+        </div>
+        <div class="card-body">
+                <form name="tagForm"class="form-horizontal" action="" method="post">
+                    <div class="form-group row">
+                        <label class="col-md-3 col-form-label" for="Name" >TagType</label>
+                        <div class="col-md-9">
+                          <!--  <select ng-model="tag.tag_type_id">
+                            <option value="">Choose Tag Type</option>
+                            <option value="{$ tag_obj.id $}" ng-repeat="tag_obj in tagType">{$ tag_obj.name $}</option>
+                            </select>
+                         -->
+                          <select ng-model="tag.tag_type_id" ng-options="tag.id as tag.name for tag in tagType">
+                          <option value="">choose tag type<option>
+                          </select>  
+
+                            
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-md-3 col-form-label" for="Name" >Name</label>
+                        <div class="col-md-9">
+                            <input type = "text" id = "name" class = "form-control" placeholder = "name" ng-model = "tag.tag_name" required="">
+                        </div>
+                    </div>
+                   <!-- <div class="form-group row">
+                        <label class="col-md-3 col-form-label" for="Tag Id" >Tag Id</label>
+                        <div class="col-md-9">
+                            <input type = "text" id = "name" class = "form-control" placeholder = "tag Id" ng-model = "tag.tag_id" required="">
+                        </div>
+                    </div>
+                    -->   
+                    <div class="form-group row">
+                        <label class="col-md-3 col-form-label" for="Description" >Description</label>
+                        <div class="col-md-9">
+                            <input type = "text" id = "name" class = "form-control" placeholder = "description" ng-model = "tag.description" required="">
+                        </div>
+                    </div>  
+                    <!-- <div class="form-group row">
+                        <label class="col-md-3 col-form-label" for="Address" >Address</label>
+                        <div class="col-md-9">
+                            <input type = "text" id = "name" class = "form-control" placeholder = "address" ng-model = "tag.address" required="">
+                        </div>
+                    </div>  
+                    <div class="form-group row">
+                        <label class="col-md-3 col-form-label" for="batch" >Batch</label>
+                        <div class="col-md-9">
+                            <input type = "text" id = "name" class = "form-control" placeholder = "batch" ng-model = "tag.batch" required="">
+                        </div>
+                    </div>  
+                    <div class="form-group row">
+                        <label class="col-md-3 col-form-label" for="Type" >Type</label>
+                        <div class="col-md-9">
+                            <input type = "text" id = "name" class = "form-control" placeholder = "type" ng-model = "tag.type" required="">
+                        </div>
+                    </div>  
+                    <div class="form-group row">
+                            
+                        <label class="col-md-3 col-form-label" for="Length" >Length</label>
+                        <div class="col-md-9">
+                            <input type = "text" id = "name" class = "form-control" placeholder = "length" ng-model = "tag.length" required="">
+                        </div>
+                    </div>  
+                    <div class="form-group row">
+                        <label class="col-md-3 col-form-label" for="Default" >Default</label>
+                        <div class="col-md-9">
+                            <input type = "text" id = "name" class = "form-control" placeholder = "default" ng-model = "tag.default" required="">
+                        </div>
+                    </div>  
+                    <div class="form-group row">
+                        <label class="col-md-3 col-form-label" for="Input" >Input</label>
+                        <div class="col-md-9">
+                            <input type = "text" id = "name" class = "form-control" placeholder = "input" ng-model = "tag.input" required="">
+                        </div>
+                    </div>  
+                    <div class="form-group row">
+                        <label class="col-md-3 col-form-label" for="Output" >Output</label>
+                        <div class="col-md-9">
+                            <input type = "text" id = "name" class = "form-control" placeholder = "output" ng-model = "tag.output" required="">
+                        </div>
+                    </div>  
+                    <div class="form-group row">
+                        <label class="col-md-3 col-form-label" for="Read Level" >Read Level</label>
+                        <div class="col-md-9">
+                            <input type = "text" id = "name" class = "form-control" placeholder = "read level" ng-model = "tag.read_level" required="">
+                        </div>
+                    </div>  
+                    <div class="form-group row">
+                        <label class="col-md-3 col-form-label" for="write_level" >Write Level</label>
+                        <div class="col-md-9">
+                            <input type = "text" id = "name" class = "form-control" placeholder = "write level" ng-model = "tag.write_level" required="">
+                        </div>
+                    </div>  
+                    <div class="form-group row">
+                        <label class="col-md-3 col-form-label" for="Log" >Log</label>
+                        <div class="col-md-9">
+                            <input type = "text" id = "name" class = "form-control" placeholder = "log" ng-model = "tag.log" required="">
+                        </div>
+                    </div>   -->
+
+                    <br>
+                    <input type="button" class="btn btn-primary" ng-disabled="tagForm.$invalid" ng-click="submit()"  value="Submit">
+                </form>
+        </div>      
+    </div>
+</div>

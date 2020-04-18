@@ -1,0 +1,154 @@
+
+
+          <div  ng-controller="projectCtrl" ng-init="compList('1')">
+            <div class="row">
+              <div class="col-lg-12" style="column-span: 4 " >
+                <div class="card">
+                  <div class="card-header"><i class="fa fa-align-justify"></i></div>
+                      <div  class="card-body">
+                        <div class="form-group row">
+                            <div class="col-md-9" ng-init="list()">
+                               <!-- <select  ng-options="x.id as x.project_name for x in projectList" ng-model="x.id" ng-click="func(x.id)">
+                                <option value="">All Tag
+                                -->
+                                <select ng-model="select" ng-change="func(select)">
+                                  <option value="" >All Tag</option>
+                                  <option value="{$ obj.id  $}" ng-repeat="obj in projectList">{$obj.project_name$} </option>
+                                  <option value="unassign">UnAssign</option>
+                                </select>
+                            </div>
+                        </div>                 
+                        <table class="table table-responsive-sm table-bordered table-striped table-sm" style="text-align: center">
+                          <thead >
+                            <tr >
+                              <th>S No</th>
+                              <th>TagID</th>
+                              <th>Tag Name</th>
+                              <th>TagType</th>
+                              <th>ComponentName</th>
+                              <th>ProjectName</th>
+                            </tr>
+                          </thead>
+                            <tbody ng-repeat="x in new_comp">
+                            <tr >
+
+                              <td>{$  (items_per_page*(current_page-1))+($index+1) $}</td>
+                              <!--   <td>{$ x.id $}</td> -->
+                                <td>{$ x.tag_id $}</td>
+                                <td>{$x.tag_name $}</td>
+                                <td>{$x.tag_type$}</td>
+                                <td>{$x.component_name$}</td>
+                                <td>{$x.project_name$}</td>
+                                 
+                                <!-- <td style="text-align: center"><button class="btn btn-primary" ng-click="edit(x.id)">EDIT</button>
+                                <button class="btn btn-danger" ng-click="delete(x.id)">Delete</button></td> {% endcomment %}
+
+                                <td><a href="list/#" class="btn-link" ng-click="edit(x.id)">Edit</a></td>
+                                <td><a href= "list/#"  class="btn-link" ng-click="delete(x.id)">Delete</a></td> -->
+                            </tr>
+                              </tbody>                     
+                        </table> 
+                        
+                       <!-- <table class="table table-responsive-sm table-bordered table-striped table-sm" ng-switch="select"  style="padding:50px" >
+                          <tr class="pagination" ng-switch-when="" >
+                            <td class="page-item" ng-if="previous_page"> 
+                            <a  id="previous" ng-click="listComponent(1)">&lt;&lt;</a>
+                            </td>
+                            <td class="page-item" ng-if="previous_page" >
+                            <a  id="previous"  ng-click="listComponent(previous_page)" >&lt;</a> 
+                            </td>
+                            <td class="page-item" >
+                            <select ng-model="current_page" ng-change="listComponent(current_page)">
+                            <option value="{$ $index+1 $}" ng-repeat="n in [].constructor(total_page) track by $index">{$ $index+1 $}
+                            </select>
+                            </td>
+                            <td class="page-item" ng-if="next_page">
+                             <a  id="previous" ng-click="listComponent(next_page)">&gt;</a>  
+                            </td>
+                            <td class="page-item" ng-if="next_page">
+                             <a  id="previous" ng-click="listComponent(total_page)">&gt;&gt;</a>  
+                            </td>
+                          </tr>
+                          <tr class="pagination" ng-switch-when="unassign" >
+                            <td class="page-item" ng-if="previous_page"> 
+                            <a  id="previous" ng-click="unAssign(1)">&lt;&lt;</a>  
+                            </td>
+                            <td class="page-item" ng-if="previous_page" >
+                            <a  id="previous"  ng-click="unAssign(previous_page)" >&lt;</a> 
+                            </td>
+                            <td class="page-item" >
+                            <select ng-model="current_page" ng-change="unAssign(current_page)">
+                            <option value="{$ $index+1 $}" ng-repeat="n in [].constructor(total_page) track by $index">{$ $index+1 $}
+                            </select>
+                            </td>
+                            <td class="page-item" ng-if="next_page">
+                             <a  id="previous" ng-click="unAssign(next_page)">&gt;</a>  
+                            </td>
+                            <td class="page-item" ng-if="next_page">
+                             <a  id="previous" ng-click="unAssign(total_page)">&gt;&gt;</a>  
+                            </td>
+                          </tr>
+                        </table>-->
+                         <!-- <ul class="pagination" ng-switch-when="unassign">
+                            <li class="page-item" ng-if="previous_page">
+                            <a class="page-link" id="previous"  ng-click="unAssign(previous_page)">Previous</a>
+                            </li>
+                            <li class="page-item" ng-repeat="n in [].constructor(2) track by $index">
+                            <a class="page-link" ng-click="unAssign($index+1)">{$ $index+1 $}</a>
+                            </li>
+                            <li class="page-item" ng-if="next_page" >
+                            <a class="page-link" ng-click="unAssign(next_page)">Next</a>
+                            </li>
+                          </ul>
+                          -->   
+                        
+                       
+                         <!-- <ul class="pagination" ng-switch-when="" >Page:
+                            <li class="page-item" ng-if="previous_page" style="padding-left:10px" title="First"> 
+                            <a class="page-cursor" ng-click="gotoPage('1')">&lt;&lt;</a>
+                            </li>
+                            <li class="page-item" ng-if="previous_page" style="padding-left:10px" title="Previous" >
+                            <a  class="page-cursor"  ng-click="gotoPage(previous_page)" >&lt;</a> 
+                            </li>
+                            <li class="page-item" style="padding-left:10px">
+                            <select ng-model="selectPage" ng-change="listComponent(this)">
+             
+                            <option ng-repeat="n in [].constructor(total_page) track by $index" ng-selected="($index+1).toString()==current_page">{$ $index+1 $}</option>
+                            </select>
+                            </li>
+                            <li class="page-item" ng-if="next_page" style="padding-left:10px" title="Next">
+                             <a  class="page-cursor" ng-click="gotoPage(next_page)">&gt;</a>  
+                            </li>
+                            <li class="page-item" ng-if="next_page" style="padding-left:10px" title="Last">
+                             <a class="page-cursor" ng-click="gotoPage(total_page)">&gt;&gt;</a>  
+                            </td>
+                          </ul>
+                        -->
+                       
+                        <ul  ng-show="show_paginate" class="pagination" >Page:
+                          <li class="page-item" ng-if="previous_page" style="padding-left:10px" title="First"> 
+                              <a class="page-cursor" ng-click="goToUPage('1')">&lt;&lt;</a>
+                          </li>
+                          <li class="page-item" ng-if="previous_page" style="padding-left:10px" title="Previous" >
+                              <a  class="page-cursor"  ng-click="goToUPage(previous_page)" >&lt;</a> 
+                          </li>
+                          <li class="page-item" style="padding-left:10px">
+                              <select ng-model="current_page" ng-change="goToUPage(current_page)" >
+                              <option value="{$ $index+1 $}" ng-repeat="n in [].constructor(num_pages) track by $index">{$ $index+1 $}</option>
+                              </select>
+                          </li>
+                          <li class="page-item" ng-if="next_page" style="padding-left:10px" title="Next">
+                              <a  class="page-cursor" ng-click="goToUPage(next_page)">&gt;</a>  
+                          </li>
+                          <li class="page-item" ng-if="next_page" style="padding-left:10px" title="Last">
+                              <a class="page-cursor" ng-click="goToUPage(num_pages.toString())">&gt;&gt;</a>  
+                          </li>
+                        </ul>    
+                        
+                      </div>
+                </div>
+              </div>
+            </div>
+          </div>
+                        
+                            

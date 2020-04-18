@@ -1,0 +1,28 @@
+<div class="col-md-12"  ng-controller="permissionCtrl" >
+<div class="card ">
+<div class="card-header">
+    <div class="card-body">
+        <form name="attach_permission" class="form-horizontal" action="" method="">
+            <div class="form-group row" ng-init="roledropdown();list()">
+                <label class="col-md-3 col-form-label" for="role" >Roles</label>
+                <div class="col-md-9"> 
+                        <select  name="role" ng-options="x.id as x.name for x in roledropdownlist" ng-model="permission.role_id" ng-change="getPermission()" ></select> 
+                        <span ng-show="attach_permission.role.$invalid" class="ng-hide" ></span>
+                </div>
+                <label class="col-md-3 col-form-label" for="role" >Permission</label>
+                <div class="col-md-9" >           
+                        <span ng-repeat="permission in permission_list">
+                        <input class="checkbox-inline {$ permission.id $}" ng-model="selectedList[permission.id]" type="checkbox"/>
+                        <label >{$ permission.codename $}</label><br>
+                        </span>
+                        <br>
+                        <input  class="checkbox-inline" type="checkbox" ng-model="selectedAll" ng-change="checkAll()"> Check all <br>  
+                </div> 
+            </div>
+            <br>
+            <input type="button" class="btn btn-primary" ng-click="submit_from_attach()"  value="Submit">
+        </form>
+    </div>
+</div>
+</div>
+</div>

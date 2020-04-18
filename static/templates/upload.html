@@ -1,0 +1,57 @@
+
+<div class="col-md-12" ng-controller="uploadCtrl" ng-init="getTagList()" >
+    <div class="card" style="height:480px">
+        <div class="card-header">
+            <strong>Image Upload</strong>
+        </div>
+        <div class="card-body">
+                <form name="testform" class="form-horizontal" action="" method="post" >
+            <!-- <form class="form-horizontal" action="javascript:void(0)" method="post"> -->
+                <div class = "form-group row">
+                    <label class="col-md-5 col-form-label" for = "Asset_name"  >Name  </label>
+                    <div class="col-md-7">
+                            
+                        <input type = "text" id = "name" name="name" placeholder = "Name" ng-model = "component.name" ng-blur="dialogClose(project.project_name)" ng-pattern="/^[a-zA-Z. ]*[a-zA-Z]{5,60}$/"  required="" >
+                        
+                        <p style="color:red" ng-show="testform.name.$dirty && testform.name.$invalid">Enter atleast 5 characters long</p>    
+                            <p style="color:red">{$ validateUser $}</p>
+                    </div>
+                </div>
+                <div class = "form-group row">
+                        <label class="col-md-5 col-form-label" for = "Asset_name"  > Component Type  </label>
+                        <div class="col-md-7">
+                                <select label="select tag_type" ng-options="x.id as x.name for x in tagType" ng-model="component.component_type_id"></select>
+  
+                            <!-- <select name="users" ng-model="component.component_type_id">
+                            <option value="">--Select User--</option>
+                            </select> -->
+                        </div>
+                </div> 
+                <div class = "form-group row">
+                        <label class="col-md-5 col-form-label" for = "Asset_name"  > Default Image  </label>
+                        <div class="col-md-7">
+                                <input type="file" ngf-select ng-model="component.default_image" name="file">
+                                <span class="col-md-5 col-form-label" data-ng-show="submitted && testform.default_image.$error.required">Required!</span> 
+                        </div>
+                </div> 
+                <div class = "form-group row">
+                        <label class="col-md-5 col-form-label" for = "Asset_name"  >State-On Image  </label>
+                        <div class="col-md-7">
+                                <input type="file" ngf-select ng-model="component.status_on" name="file">
+                        </div>
+                    </div>
+                    <div class = "form-group row">
+                            <label class="col-md-5 col-form-label" for = "Asset_name"  >State-Off Image  </label>
+                            <div class="col-md-7">
+                                    <input type="file" ngf-select ng-model="component.status_off" name="file">
+                                    <!-- <input type="file" fileinput="file" filepreview="filepreview"/> -->
+                            </div>
+                        </div>
+                
+                <input type="button" class="btn btn-primary;ngdialog-button" value="Submit" ng-click="saveFile()">
+            </form>
+        </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,54 @@
+{% load static from staticfiles %}
+<head>
+    <base href="./../">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="description" content="CoreUI - Open Source Bootstrap Admin Template">
+    <meta name="author" content="Łukasz Holeczek">
+    <meta name="keyword" content="Bootstrap,Admin,Template,Open,Source,jQuery,CSS,HTML,RWD,Dashboard">
+    <title>IoT</title>
+    
+    <!-- Links -->    
+    <link rel="icon" href="{% static '\src\images\iot.jpg' %}" type="image/jpg">
+    <link href="{% static 'nodejs/node_modules/@coreui/icons/css/coreui-icons.min.css' %}" rel="stylesheet">
+    <link href="{% static 'nodejs/node_modules/flag-icon-css/css/flag-icon.min.css' %}" rel="stylesheet">
+    <link href="{% static 'nodejs/node_modules/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
+    <link href="{% static 'nodejs/node_modules/simple-line-icons/css/simple-line-icons.css' %}" rel="stylesheet">
+    <link href=" {% static 'src/css/style.css' %}"rel="stylesheet">
+    <link href="{% static 'src/vendors/pace-progress/css/pace.min.css' %}" rel="stylesheet">
+    <link rel="stylesheet" media="screen" type="text/css" href="static/src/css/colorPicker_new.css" />
+	  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/angular-toastr@2/dist/angular-toastr.css">
+    <link rel="stylesheet" href= "{% static 'nodejs/node_modules/ng-dialog/css/ngDialog.min.css' %}">
+    <link rel="stylesheet" href="{% static 'nodejs/node_modules/ng-dialog/css/ngDialog-theme-default.min.css' %}">
+    <link rel="stylesheet" href=" {% static 'nodejs/node_modules/ui-select/dist/select.css' %}"></link>
+   <!-- Scripts -->
+    <script src="http://127.0.0.1:4000/socket.io/socket.io.js"></script> 
+    <script src="{% static 'nodejs/node_modules/jquery/dist/jquery.min.js' %}"></script>
+    <script src="{% static 'nodejs/node_modules/popper.js/dist/umd/popper.min.js' %}"></script>
+    <script src="{% static 'nodejs/node_modules/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'nodejs/node_modules/pace-progress/pace.min.js' %}"></script>
+    <script src="{% static 'nodejs/node_modules/perfect-scrollbar/dist/perfect-scrollbar.min.js' %}"></script>
+    <script src="{% static 'nodejs/node_modules/@coreui/coreui/dist/js/coreui.min.js' %}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.9/angular-cookies.js"></script>
+    <script src="//cdn.rawgit.com/auth0/angular-storage/master/dist/angular-storage.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular-sanitize.js"></script>
+    <script src="{%  static 'nodejs/node_modules/ng-file-upload/dist/ng-file-upload.js' %}" ></script>
+    <script src="{%  static 'nodejs/node_modules/ng-file-upload/dist/ng-file-upload-shim.min.js' %}" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/angular-toastr@2/dist/angular-toastr.tpls.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/checklist-model/1.0.0/checklist-model.min.js"></script>
+    <script src="{% static 'nodejs/node_modules/ui-select/dist/select.js'%}"></script>
+    <script src="static/src/assets/select2/select2.min.js"></script>
+    <script src="{% static 'nodejs/node_modules/ng-dialog/js/ngDialog.min.js'%}"></script>
+    <script src="{% static 'nodejs/node_modules/ng-file-upload/dist/ng-file-upload.min.js'%}"></script>
+    <script src="{% static 'js/app.js' %}"></script>
+    <script src="{% static 'js/authService.js' %}"></script>
+    <script src="{% static 'js/login.js' %}"></script>
+  </head>
+
+  {% block content %}
+  
+  {% endblock content %}

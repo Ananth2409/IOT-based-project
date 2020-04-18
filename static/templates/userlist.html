@@ -1,0 +1,37 @@
+<!-- {% extends "app.html" %}
+{% block content %} -->
+<div  ng-controller="myUser" ng-init="userlist()">
+            <div class="row">
+              <div class="col-lg-12" style="column-span: 4 ">
+                <div class="card">
+                  <div class="card-header">
+                    <i class="fa fa-align-justify"></i> Userlist</div>
+                  <div class="card-body" >
+                    <table class="table table-responsive-sm table-bordered table-striped table-sm" style="text-align:center">
+                      <thead>
+                        <tr >
+                          <th>S No</th>
+                          <th>Firstname</th>
+                          <th>Lastname</th>
+                          <th>Email</th>
+                          <th>Mobile No</th>
+                          <th>Options</th>
+                          </tr>
+                      </thead>
+                        <tbody>
+                        <tr ng-repeat="x in userlist">
+                           <td>{$ $index+1 $}</td>
+                          <!--   <td>{$ x.id $}</td> -->
+                            <td>{$ x.first_name $}</td>
+                            <td>{$ x.last_name$}</td>
+                            <td>{$ x.email $}</td>
+                            <td>{$ x.mobile_no $}</td>
+
+                             <td><a class="btn btn-primary" ui-sref="editpage({int:x.id})" role="button"ng-click="">Edit</a>
+                                <a  class="btn btn-danger" ng-click="delete(x.id)">Delete</a></td>
+                        </tbody>
+                        </table>
+                        </div>
+<!-- {% include "bottom.html" %}
+{% endblock %} -->
+                        

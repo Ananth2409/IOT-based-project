@@ -1,0 +1,116 @@
+
+    <!-- {% if perms.ToCreateEngineer %} -->
+    <!-- <div class="col-md-12"  ng-controller="myUser" ng-init="getUser()" > -->
+            
+    <div class="col-md-12"  ng-controller="myUser" ng-init="uservalue();projectList()" style= >
+        <div class="card">
+            <div class ="card-header">
+                <strong>Add User</strong></div>
+                <div class="card-body">
+                    <form name="testform" class="form-horizontal" action="" method="post" style="font-size:initial"
+                        
+                    {% endwith %}" >
+                        <div class="form-group row">
+                            <label class="col-md-2 col-form-label" for="Name" >FirstName</label>
+                            <div class="col-sm-3">
+                                <input type = "text" name = "firstname" class = "form-control" placeholder = "FirstName" ng-model = "reg.first_name" ng-pattern="/^[a-zA-Z. ]*[a-zA-Z]{3,60}$/" required="">
+                                <p style="color:red" ng-show="testform.firstname.$dirty && testform.firstname.$invalid">Firstname needs to be at least 3 characters long</p>    
+                            </div>
+                            <label class="col-md-2 col-form-label" for="Name" >LastName</label>
+                            <div class="col-sm-3">
+                                <input type = "text" id = "name" class = "form-control" placeholder = "LastName" ng-model = "reg.last_name" required="">
+                            </div>
+                         </div>
+                        
+
+                        
+                        <div class="form-group row">
+                            <label class="col-md-2 col-form-label"  for="Name" >UserName</label>
+                            <div class="col-sm-3">
+                                <input type = "text" id = "name" name="username"   class = "form-control" placeholder = "UserName" ng-model = "reg.username" ng-blur="checkuser(reg.username)" ng-pattern="/^[a-zA-Z. ]*[a-zA-Z]{5,60}$/"  required="">
+                                <p style="color:red" ng-blur="checkuser()" ng-show="testform.username.$dirty && testform.username.$invalid">Username needs to be at least 5 characters long</p>    
+                                <p style="color:red">{$ validateUser $}</p>
+                            </div>
+                            <label class="col-md-2 col-form-label" for="Name" >MobileNo</label>
+                            <div class="col-sm-3">
+                                  <input type = "text" id = "name" required maxlength="10" ng-pattern="/^[7-9][0-9]{9}$/" name="mobileno"  class = "form-control" placeholder = "MobileNo" ng-model = "reg.mobile_no" required="">
+                                
+                                    <span  style="color:red" ng-show="testform.mobileno.$dirty && testform.mobileno.$invalid" class="ng-hide" >   
+                                        Please Enter Valid  Mobile No.!  
+                                    </span>  
+                            </div>
+                         </div>
+                       
+                         <div class="form-group row">
+                            <label class="col-md-2 col-form-label" for="Name" >Email</label>
+                            <div class="col-sm-3">
+                                <input type = "text" id = "name" name="email" class = "form-control" placeholder = "Email" ng-model = "reg.email" ng-pattern="/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/" required="">
+                                <span  ng-show="testform.email.$dirty && testform.email.$invalid" class="ng-hide"> Please enter valid email address  </span> 
+                            </div>
+                            <label class="col-md-2 col-form-label" for="Name" >Password</label>
+                            <div class="col-sm-3">
+                               <!-- <input type = "text" id = "name" name="password" class = "form-control" placeholder = "Password" ng-model = "reg.password" ng-pattern="/^[a-zA-Z. ]*[a-zA-Z]{1,60}$/" required="">-->
+                                <input type = "text" id = "name" name="password" class = "form-control" placeholder = "Password" ng-model = "reg.password" ng-pattern="/^[a-zA-Z0-9]{6,60}$/" required="">
+                                <p  style="color:red" ng-show="testform.password.$dirty && testform.password.$invalid">Password needs to be at least 5 characters long</p> 
+                                
+                            </div>
+                         </div>
+                
+
+                        <div class="form-group row">
+                            <label class="col-md-2 col-form-label" for="Name" >Analog_Tag</label>
+                            <div class="col-sm-3">
+                                <input type = "number"  class = "form-control" placeholder = "Analog_Tag" ng-model = "reg.analog_tag
+                                " required="">
+                            </div>
+                            <label class="col-md-2 col-form-label" for="Name" >Digital_tag</label>
+                            <div class="col-sm-3">
+                                <input type = "number" class = "form-control" placeholder = "Digital_tag" ng-model = "reg.digital_tag
+                                " required="">
+                            </div>
+                         </div>
+                        <div class="form-group row">
+                            <label class="col-md-2 col-form-label" for="Name" >Video_tag</label>
+                            <div class="col-sm-3">
+                                <input type = "number"  class = "form-control" placeholder = "Video_tag" ng-model = "reg.video_tag
+                                " required="">
+                            </div>
+                            <label class="col-md-2 col-form-label" for="Name" >Audio_tag</label>
+                            <div class="col-sm-3">
+                                <input type = "number"  class = "form-control" placeholder = "audio_tag" ng-model = "reg.audio_tag
+                                " required="">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-md-3 col-form-label" for="Name" >Projects</label>
+                            <div class="col-md-3">
+                                <ui-select multiple ng-model="projects.selectedProject" theme="bootstrap" style="width: 800px;">
+                                    <ui-select-match placeholder="Select Project...">{$ $item.project_name $} &lt;{$ $item.description $}&gt;</ui-select-match>
+                                    <ui-select-choices repeat="item in project_array|filter:$select.search">
+                                    <div ng-bind-html="item.project_name|filter:$select.search"></div>
+                                    <small>
+                                        project_name: {$ item.project_name $}
+                                        description: <span ng-bind-html="''+item.description"></span>
+                                    </small>
+                                    </ui-select-choices>
+                                </ui-select>
+                               
+                            </div>
+                        </div>
+                        <div class="form-group row"> 
+                            <div class="col-md-9">
+                                <input type = "button" class="btn btn-primary"    ng-disabled="testform.$invalid" ng-click="submitUser()" value="Submit">
+                            </div>
+                            </div>
+
+                        </div>
+
+
+                    </form><!--form -->
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- {% endif %} -->
+  

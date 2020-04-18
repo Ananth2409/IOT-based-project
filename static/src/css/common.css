@@ -1,0 +1,116 @@
+/*============================== Content ===============================*/
+.tile-titles{padding:6px 15px;float:left;}
+.chapter-title-single1{line-height:40px;}
+.tile-subtitles li{display:inline-block;vertical-align:middle;position:relative;color:#666;font-family: 'open_sanssemibold', sans-serif;padding:0 5px;}
+.tile-subtitles > li:after{content:"";position:absolute;bottom:3px;right:-3px;width:2px;height:2px;display:block;background:#666;}
+.tile-subtitles li:first-child:after, .tile-subtitles li:last-child:after{content:none;}
+.tile-subtitles li:first-child{padding-left:0;}
+
+.rating li{background:url(../images/rating.png) no-repeat -12px 0;width:12px;height:12px;vertical-align:baseline;cursor:pointer;}
+.rating li.selected{background-position:0 0;}
+
+.actionicons{float:right;padding:11px 0;}
+.actionicons li{float:left;}
+.actionicons li a{display:block;padding:0 15px;font-size:12px;color:#666;}
+.actionicons li a span{background:url(../images/action-icons.png) no-repeat;width:20px;height:30px;display:block;}
+.actionicons li a span.edit{background-position:0 0;}
+.actionicons li a span.fav{background-position:-20px 0;}
+.actionicons li a span.add{background-position:-40px 0;}
+.actionicons li a span.play{background-position:-60px 0;}
+.actionicons li a span.delete{background-position:-80px 0;}
+.actionicons li a span.minus{background-position:-40px -28px;}
+.actionicons li a span.assign{background-position:-100px 0;}
+.actionicons li a span.preview{background-position:-120px 0;}
+.actionicons li a span.review{background-position:-160px -30px;}
+.actionicons li a span.edit-note{background-position:-180px -30px;}
+
+.actionicons li a span.fav.selected{background-position:-20px -30px;}
+
+.formaticons{
+	-webkit-border-top-left-radius: 3px;
+	-webkit-border-bottom-left-radius: 3px;
+	-moz-border-radius-topleft: 3px;
+	-moz-border-radius-bottomleft: 3px;
+	border-top-left-radius: 3px;
+	border-bottom-left-radius: 3px;
+	background:#ff6666;
+	width:40px;height:56px; float:left;	text-align:center;padding:18px 0;line-height:0;
+}
+.formaticons-assign{background:#90508e;}
+.formaticons span, .sch-formaticons span{background:url(../images/activity-type.png) no-repeat;width:20px;height:20px;display:inline-block;}
+.formaticons span.videoformat, .sch-formaticons span.videoformat{background-position:0 0;}
+.formaticons span.pptformat, .sch-formaticons span.pptformat{background-position:-20px 0;}
+.formaticons span.docformat, .sch-formaticons span.docformat{background-position:-40px 0;}
+.formaticons span.tubeformat, .sch-formaticons span.tubeformat{background-position:-60px 0;}
+.formaticons span.quzformat, .sch-formaticons span.quzformat{background-position:-80px 0;}
+.formaticons span.plugformat, .sch-formaticons span.plugformat{background-position:-120px 0;}
+.formaticons span.reviseformat, .sch-formaticons span.reviseformat{background-position:-100px 0;}
+.formaticons span.puzzel, .sch-formaticons span.puzzel{background-position: -139px 0;}
+.formaticons span.assignformat, .sch-formaticons span.assignformat{background-position:-160px 0;}
+.formaticons span.uncategorized, .sch-formaticons span.uncategorized{background-position:-180px 0;}
+
+
+.subchaptersdivider{margin:0 15px;padding-bottom:15px;display: none;}
+
+.sub-chapters{margin:0 0 0 -9px;}
+.sub-chapters > li{float:left;width:216px;background:#ffe0e0;margin:15px 0 0 9px;}
+.sub-chapters > li.color2{background:#ebebfa;}
+.sub-chapters > li.color3{background:#cdf2f2;}
+.sub-chapters > li.color4{background:#ebebeb;}
+.sub-chapters > li.color5{background:#e0f5ff;}
+.sub-chapters > li.color6{background:#f9edd3;}
+.sub-chapters > li.color7{background:#daf1c2;}
+.sub-chapters > li.color9{background:#1a6ab1;}
+.sch-formaticons{background:#ff6666;width:40px;height:48px;float:left;text-align:center;padding:13px 0;line-height:0;cursor:pointer;}
+.darkbgcolor2, .sub-chapters > li.color2 .sch-formaticons{background:#9a9ae4;}
+.darkbgcolor3, .sub-chapters > li.color3 .sch-formaticons{background:#5bd4d4;}
+.darkbgcolor4, .sub-chapters > li.color4 .sch-formaticons{background:#4c4c4c;}
+.darkbgcolor5, .sub-chapters > li.color5 .sch-formaticons{background:#66ccff;}
+.darkbgcolor6, .sub-chapters > li.color6 .sch-formaticons{background:#e0a928;}
+.darkbgcolor7, .sub-chapters > li.color7 .sch-formaticons{background:#60952b;}
+.darkbgcolor8, .sub-chapters > li.color8 .sch-formaticons{background:#4c4c4c;}
+.darkbgcolor9, .sub-chapters > li.color9 .sch-formaticons{background:#1a6ab1;}
+.chapter-names{position:relative;float:left;width:176px;padding:5px 18px 5px 10px;}
+.chapter-title{font-family: 'open_sansbold', sans-serif;width:100%;overflow:hidden;text-overflow:ellipsis; white-space:nowrap;line-height:18px;}
+.chapter-title a{color:#2f3338;}
+.chapter-title-single{line-height:34px;}
+.chapter-subtitle li{font-size:12px;display:inline-block;vertical-align:middle;position:relative;color:#666;font-family: 'open_sanssemibold', sans-serif;padding:0 4px;line-height:16px;}
+.chapter-subtitle li:after{content:"";position:absolute;bottom:3px;right:-3px;width:2px;height:2px;display:block;background:#666;}
+.chapter-subtitle li:first-child{padding-left:0;}
+.chapter-subtitle li:last-child{width:95px;overflow:hidden;text-overflow:ellipsis; white-space:nowrap;}
+
+/* Star Rating Popup */
+.labelhead{ background:#8c8c8c; border-radius:8px;-webkit-border-radius:8px;-moz-border-radius:8px;-ms-border-radius:8px;-o-border-radius:8px;margin-left:20px; font-size:10px; color:#fff;padding: 1px 12px;line-height:14px;}
+.ratings-dialog .title-boxshadow{ background:#fff; border-bottom:solid 1px #bebebe;padding:5px 0;}
+.ratings-dialog .tile-subtitles li:nth-child(2):after{content: "";}
+.ratings-dialog .tile-subtitles li:nth-child(2){padding: 0 5px;}
+.overalrating{ float:left; width:34%;}
+.overalratesec > li{ display:block; color:#4e4e4f;margin-bottom:5px;}
+.overalratesec li .rating li{ display:inline-block;}
+.ratingno{  font-size:50px;line-height:46px;}
+.ratingname{ font-size:16px;font-family: 'open_sansregular', sans-serif;}
+.overalrating-graph{ float:right; width:66%; padding-left:10px;}
+.overalrating-graph img{ text-align:right; width:100%;}
+
+/* tab section */
+#myreview {padding: 20px !important;}
+.reviewlft{ float:left;}
+.reviewrgt{ float:right;}
+.reviewsheadsec{ padding:10px 0;}
+.ratingtabsec .ui-tabs-panel{ padding:0 !important;}
+.reviewsscroll{ height:160px;overflow:auto;padding:0 10px 0 15px;}
+.reviewlist > li{ border-bottom:solid 1px #bebebe; padding:10px 5px;}
+.reviewlist > li:last-child{ border-bottom:none;}
+.reviewlft .rightmenu > li{ color:#4e4e4f; text-align:left; vertical-align:middle;}
+.reviewlft .rightmenu > li.userimg{margin:0 10px 0 0;}
+.ui-widget-content a.reviewmore{ color:#1a6ab1;}
+.schoolname{ width:250px; overflow:hidden; text-overflow:ellipsis;white-space: nowrap;}
+.myrating{margin-top:20px;}
+#myreview .field-wrapper{width:auto;margin-bottom:0;}
+.reviewrgt .tile-subtitles > li:after, .myrating .tile-subtitles > li:after{content: none !important;}
+.reviewrgt .tile-subtitles li:nth-child(2){padding:0;}
+.myreviewrating li{background:url(../images/rating-icon.png) no-repeat -26px 0;width:28px;height:28px;cursor:pointer;}
+.myreviewrating li.selected{background-position:1px 0;}
+.hideContent {overflow: hidden;height: 35px;}
+.ratings-close-container {padding: 15px;}
+

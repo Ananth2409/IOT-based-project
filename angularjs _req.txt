@@ -1,0 +1,3 @@
+npm install ng-dialog
+npm install socket.io
+npm install cookie

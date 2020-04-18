@@ -1,0 +1,250 @@
+/*============================== Custom Scroll ===============================*/
+.mCS-rounded.mCSB_scrollTools .mCSB_dragger, .mCS-rounded-dark.mCSB_scrollTools .mCSB_dragger, .mCS-rounded-dots.mCSB_scrollTools .mCSB_dragger, .mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_dragger{height:60px;}
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{background-color:#fff;border-radius:4px;border:1px solid #4c4c4c;}
+.mCS-rounded-dots.mCSB_scrollTools .mCSB_draggerRail, .mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_draggerRail{background:none;border:2px solid #3f454b;opacity:1;}
+
+.mCSB_inside > .mCSB_container{margin-right:20px;}
+
+.mCSB_scrollTools{width:15px;}
+
+/*============================== Custom Select ===============================*/
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+  background-color: #1a6ab1;
+  color: #fff; }
+.select2-results__option{font-size:12px;}
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+    background-color: #c1dff9;
+    border-color: #c1dff9;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 14px;
+    padding: 4px 4px 4px 6px;
+}
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+    float: right;
+    color: #2f3338;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 24px;
+	line-height:14px;
+    font-weight: normal;
+    margin:1px 0 0 8px;
+}
+.select2-container--default .select2-selection--multiple, .select2-container--default .select2-selection--single {border-radius: 3px;}
+.select2-container--default.select2-container--focus .select2-selection--multiple {border-color: #aaa;}
+
+/*============================== Accordion ===============================*/
+.allchapterlist-acc .ui-accordion-header{margin:0;}
+.allchapterlist-acc .ui-accordion-icons{padding:0 0 0 5px;}
+.allchapterlist-acc .ui-widget-content{border:0;padding:0;}
+.allchapterlist-acc .ui-state-default, .allchapterlist-acc .ui-widget-content .ui-state-default, .allchapterlist-acc .ui-widget-header .ui-state-default
+{background:none;border:0; list-style:none;}
+
+/*WhiteBoard*/
+.whiteboard-gallery .ui-state-default, .whiteboard-gallery .ui-widget-content .ui-state-default, .whiteboard-gallery .ui-widget-header .ui-state-default
+{background:none;border:0;}
+.whiteboard-gallery .ui-widget-content{border:none;background:none;margin-left:-5px;}
+.whiteboard-gallery .ui-accordion .ui-accordion-content{ padding:0;}
+.whiteboard-gallery .ui-accordion .ui-accordion-header .ui-accordion-header-icon{ display:none;}
+
+/*=============================== Calendar Styles ============================================= */
+.ui-datepicker{cursor:pointer;font-size:13px;background:#fff;padding:0;width:250px;border:1px solid #ccc;display:none;}
+.ui-datepicker .ui-datepicker-title{margin:0 10px 0 10px;text-align:left;line-height:22px;color:#fff;text-align:center;}
+.ui-icon{text-indent:-99999px;display:block;}
+.ui-datepicker .ui-datepicker-header{padding:2px;position:relative;background:#3b3b3b;margin-bottom:4px;}
+.ui-datepicker .ui-datepicker-prev,.ui-datepicker .ui-datepicker-next{height:9px;position:absolute;top:8px;width:6px;background:url(../images/dp_arrows.png) no-repeat;}
+.ui-datepicker .ui-datepicker-prev{background-position:0 -9px;left:8px;border:0;}
+.ui-datepicker .ui-datepicker-next{background-position:0 0;right:8px;border:0;}
+.ui-datepicker .ui-datepicker-next:hover{background-position:-6px 0;}
+.ui-datepicker .ui-datepicker-prev:hover{background-position:-6px -9px;}
+.ui-datepicker-trigger{cursor:pointer;position: absolute;right: 14px;top: 8px;width:17px;height:19px;}
+.ui-datepicker-calendar{padding:0 2px;font-size:11px !important;}
+.event-frm .ui-datepicker-trigger{float:none;margin:1px 0 0 10px;cursor:pointer;}
+.ui-datepicker-calendar th{color:#2f3338;text-align:left;padding:2px 4px;}
+.ui-datepicker-calendar td{padding:0;}
+.ui-datepicker-calendar .ui-state-default{text-align:center;display:block;color:#2f3338;padding:4px;width:22px;height:22px; margin:1px 0px;border:0;background:none;}
+.ui-datepicker-today .ui-state-highlight,.ui-datepicker-calendar .ui-state-hover{color:#fff;border:0;background:#2495f9;border-radius:50%;}
+.ui-datepicker .ui-state-disabled span{color:#7cccec !important;}
+
+/*============================== Dialog Box ===============================*/
+.ui-widget-overlay{background:#000;opacity:0.8;filter: alpha(opacity = 80);}
+.ui-dialog{padding:0;border:0;background:none;}
+.ui-dialog .ui-dialog-titlebar{display:none;}
+.ui-dialog .ui-dialog-content{padding:0;}
+.popup-title{background:#1a6ab1;color:#fff;font-family: 'open_sanssemibold', sans-serif;font-size:18px;padding:10px 20px;
+-webkit-border-top-left-radius: 3px;
+-webkit-border-top-right-radius: 3px;
+-moz-border-radius-topleft: 3px;
+-moz-border-radius-toprightft: 3px;
+border-top-left-radius: 3px;
+border-top-rightt-radius: 3px;
+}
+.attendance-title{ background:#fff;font-family: 'open_sansbold'; color:#4c4c4c; font-size:14px; }
+.attendance-title a{ color:#1a6ab1; font-size:12px; float:right;}
+.attendance-cal{ background:#1a6ab1; display:block; color:#fff;}
+.attendance-cal .daterange__picker{ margin:0 auto; padding:10px;}
+
+.dialog-content{background:#fff;padding:15px;}
+
+.rename-whitebrd-title{background:#1a6ab1 url(../images/renamebg.png) no-repeat 340px 17px;}
+.delete-title{background:#ff3b3b  url(../images/deletebg.png) no-repeat 340px 17px;}
+.alert-title {background: #FE6E3C url(../images/alertbg.png) no-repeat 340px 17px;}
+.save-confirmation-title {background: #28941A url(../images/savebg.png) no-repeat 340px 17px;}
+
+.dialoghide{display:none;}
+
+/*============================== Tabination ===============================*/
+.tabs {border: 0; bottom: 0; padding: 0; position: absolute;top: 0;width: 100%;background:none;}
+.tabs .ui-widget-header{border:0;}
+.ui-tabs-vertical .ui-tabs-nav{width:65px;float:left;padding:0;text-align:center;margin-left:1px;}
+.ui-tabs-vertical .ui-tabs-nav li { clear: left; width: 100%;  margin: 0 ;border-radius:0;}
+.ui-tabs-vertical .ui-tabs-nav li a { display:none;float:none !important;padding:8px 8px !important;}
+.ui-tabs-vertical .ui-tabs-nav li.ui-tabs-active {margin-bottom:0;padding-bottom:0; }
+
+.tabs .ui-state-default, .tabs .ui-widget-content .ui-state-default, .tabs .ui-widget-header .ui-state-default{background:#e1e3e5;border:0;border-right:1px solid #bec0c2;}
+.tabs .ui-state-default a, .tabs .ui-state-default a:link, .tabs .ui-state-default a:visited{color:#8f8f90;-webkit-box-shadow: -2px 0 2px 0 #999;
+box-shadow: -2px 0 2px 0 #999;}
+
+.tabs .ui-state-active, .tabs .ui-widget-content .ui-state-active, .tabs .ui-widget-header .ui-state-active{background:#fff;border:0;}
+.tabs .ui-state-active a, .tabs .ui-state-active a:link, .tabs .ui-state-active a:visited{color:#1a6ab1;}
+
+.ui-tabs-vertical .ui-tabs-panel{padding:0;height:100%;}
+
+.ui-tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor, .ui-tabs .ui-tabs-nav li.ui-state-disabled .ui-tabs-anchor, .ui-tabs .ui-tabs-nav li.ui-tabs-loading .ui-tabs-anchor{cursor:pointer;}
+
+/*Horizontal*/ 
+.tabhoriz {padding:0;border-radius:0;border:0;}
+.tabhoriz .ui-tabs-nav{border-radius:0;background:#1a6ab1;padding:0;border:0;}
+.tabhoriz .ui-tabs-nav li{background:#1a6ab1;margin:0;border:0;border-radius:0;}
+.tabhoriz .ui-tabs-nav .ui-tabs-anchor{color:#7fc3ff;font-family: 'open_sanssemibold', sans-serif;padding:10px 19px;}
+.tabhoriz .ui-tabs-nav li.ui-tabs-active{margin-bottom:0;padding-bottom:0;}
+.tabhoriz .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor{color:#fff;background:#2495f9;}
+.tabhorizstyle .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor:after {
+	top: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(36, 149, 249, 0);
+	border-top-color: #2495f9;
+	border-width: 8px;
+	margin-left: -8px;
+}
+.tabhoriz .ui-tabs-panel{padding:25px 20px;}
+
+/*School Settings*/
+.schooltabhoriz {background:none;}
+.schooltabhoriz  .ui-tabs-panel{padding:20px 0 0;}
+
+/*Class Section*/
+.class-selection-content{ background:none;margin-top:10px;}
+.selectiontabs.ui-tabs-nav{border:solid 1px #fff;width:350px; margin:auto;position:relative;background:none;}
+.ui-tabs .selectiontabs.ui-tabs-nav li{ background:none; border-right:solid 1px #fff;width:33.33%;text-align:center;}
+.ui-tabs .selectiontabs.ui-tabs-nav li a{ color:#fff;float:none;display:block; }
+.ui-tabs .selectiontabs.ui-tabs-nav li:last-child{ border-right:none;}
+.ui-tabs .selectiontabs.ui-tabs-nav li.ui-state-active,.selectiontabs.ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor{ background:#fff;color:#1a6ab1;}
+
+.class-selection-content .ui-tabs-panel{padding:30px 0;}
+
+/*Whiteboard Bottom Tabs*/
+.whiteboard-tab-nav{background:none;height:100%;}
+.whiteboard-tabs{margin:0 auto;width:190px;}
+.whiteboard-tabslist {position: fixed;bottom: 130px;}
+.whiteboard-tab-nav .ui-tabs-nav .ui-tabs-anchor {padding: 10px 30px;font-size:16px;font-family: 'open_sansregular', sans-serif;}
+.whiteboard-tab-nav .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor:after {
+	top: -16px;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(36, 149, 249, 0);
+	border-bottom-color: #2495f9;
+	border-width: 8px;
+	margin-left: -8px;
+}
+.whiteboard-tab-nav .ui-tabs-panel{padding:0 20px;}
+
+/*Open Tab*/
+.whiteboard-tab-nav #open{padding:20px 0;}
+.recent-open-files .ui-tabs-nav{width:160px;background:none;float:none;}
+.recent-open-files .ui-tabs-nav .ui-state-default{background:none;margin:0 0 15px !important;border:0;}
+.recent-open-files .ui-tabs-nav .ui-tabs-anchor{box-shadow:none !important;text-transform:uppercase;font-size:14px;text-align:left;border-left:4px solid transparent;font-family: "open_sansbold",sans-serif;padding:0 6px !important;line-height:14px;}
+.recent-open-files .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor{border-left:4px solid #fff;background:none;}
+.recent-open-files .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor:after {border:0;}
+.recent-open-files .ui-tabs-panel{padding:0;height:auto;}
+
+/*============================== Custom Checkbox, Radio  ===============================*/
+.icheckbox_minimal-purple, .iradio_minimal-purple {
+  display: inline-block;
+  *display: inline;
+  vertical-align: bottom;
+  margin: 0 5px 0 0;
+  padding: 0px;
+  width: 20px;
+  height: 20px;
+  background: url(../images/radio-check-box.png) 0 0 no-repeat;
+  border: none;
+  cursor: pointer;
+}
+/*@media (-o-min-device-pixel-ratio: 5 / 4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+  .icheckbox_minimal-purple, .iradio_minimal-purple {
+    background-image: url(../images/radio-check-box@2x.png);
+    -webkit-background-size: 160px 20px;
+    background-size: 160px 20px;
+  }
+}*/
+
+.icheckbox_minimal-purple.hover {
+  /*background-position: -20px 0;*/
+}
+.icheckbox_minimal-purple {
+  background-position: 0 0;
+}
+.icheckbox_minimal-purple.checked {
+  background-position: -20px 0;
+}
+.icheckbox_minimal-purple.checked.hover {
+  background-position: -20px 0;
+}
+.icheckbox_minimal-purple.disabled {
+  background-position: -40px 0;
+  cursor: default;
+}
+.icheckbox_minimal-purple.checked.disabled {
+  background-position: -60px 0;
+}
+
+.iradio_minimal-purple {
+  background-position: -80px 0;
+}
+.iradio_minimal-purple.checked {
+  background-position: -100px 0;
+}
+.iradio_minimal-purple.disabled {
+  background-position: -120px 0;
+  cursor: default;
+}
+.iradio_minimal-purple.checked.disabled {
+  background-position: -140px 0;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+    only screen and (-o-min-device-pixel-ratio: 3/2),
+    only screen and (min--moz-device-pixel-ratio: 1.5),
+    only screen and (min-device-pixel-ratio: 1.5) {
+	.icheckbox_minimal-purple, .iradio_minimal-purple {
+		background-image: url(../images/radio-check-box@2x.png);
+		-webkit-background-size: 160px auto;
+		background-size: 160px auto;
+	}
+}
+
+/*============================== Text Editor  ===============================*/
+.jqte_editor, .jqte_source{height: 70px; overflow-y:auto;}
+

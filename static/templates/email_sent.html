@@ -1,0 +1,85 @@
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<!--
+* CoreUI - Free Bootstrap Admin Template
+* @version v2.0.0
+* @link https://coreui.io
+* Copyright (c) 2018 creativeLabs Łukasz Holeczek
+* Licensed under MIT (https://coreui.io/license)
+-->
+
+<html lang="en">
+  <head>
+    <base href="./">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="description" content="CoreUI - Open Source Bootstrap Admin Template">
+    <meta name="author" content="Łukasz Holeczek">
+    <meta name="keyword" content="Bootstrap,Admin,Template,Open,Source,jQuery,CSS,HTML,RWD,Dashboard">
+    <title>Iot</title>
+    <link rel="icon" href="{% static '\src\images\iot.jpg' %}" type="image/jpg">
+    <!-- Icons-->
+    <link href="{% static 'nodejs/node_modules/@coreui/icons/css/coreui-icons.min.css' %}" rel="stylesheet">
+    <link href="{% static 'nodejs/node_modules/flag-icon-css/css/flag-icon.min.css' %}" rel="stylesheet">
+    <link href="{% static 'nodejs/node_modules/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
+    <link href="{% static 'nodejs/node_modules/simple-line-icons/css/simple-line-icons.css' %}" rel="stylesheet">
+    <!-- Main styles for this application-->
+    <link href=" {% static 'src/css/style.css' %}"rel="stylesheet">
+    <link href="{% static 'src/vendors/pace-progress/css/pace.min.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/angular-toastr@2/dist/angular-toastr.css">
+       <!-- <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+       <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.13/angular-ui-router.min.js"></script> -->
+       <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.min.js"></script>
+       
+       <script src="//cdn.rawgit.com/auth0/angular-storage/master/dist/angular-storage.js"></script>
+       <script src="https://cdn.jsdelivr.net/npm/angular-toastr@2/dist/angular-toastr.tpls.js"></script>
+       <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.9/angular-cookies.js"></script>
+       {% comment %} <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-cookies.js"></script> {% endcomment %}
+       
+       <script src="{%  static 'nodejs/node_modules/ng-file-upload/dist/ng-file-upload.js' %}" ></script>
+     <script src="{%  static 'nodejs/node_modules/ng-file-upload/dist/ng-file-upload-shim.min.js' %}" ></script>
+     <script src="{% static 'nodejs/node_modules/ng-dialog/js/ngDialog.min.js' %}"></script>
+     <script src="{%  static 'nodejs/node_modules/angular-utils-pagination/dirPagination.js' %}" ></script>
+     <!-- <script src="{%  static 'nodejs/node_modules/@cgross/angular-notify/dist/angular-notify.js' %}" ></script>
+     <script src="{%  static 'nodejs/node_modules/@cgross/angular-notify/dist/angular-notify.css' %}" ></script> -->
+      <script src="{% static 'js/app.js' %}"></script>
+      <script src="{% static 'js/login.js' %}"></script>
+      <script src="{% static 'js/authService.js' %}"></script>
+      
+  </head>
+
+  <body class="app flex-row align-items-center">
+
+    <div class="container" ng-App="newApp" ng-controller="loginCtrl">
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <div class="card-group">
+            <div class="card p-4">
+            <h1 style="text-align:center" > Email Sent</h1>
+              <div class="card-body">
+                
+                <!--<p class="text-muted">Enter your registered email id</p>-->
+                <p style="font-size:18px">we just sent a msg to the email provided you. Please checkout your inbox and follow the instructions to reset the password</p>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- CoreUI and necessary plugins-->
+    <script src="{% static 'nodejs/node_modules/jquery/dist/jquery.min.js' %}"></script>
+    <script src="{% static 'nodejs/node_modules/popper.js/dist/umd/popper.min.js' %}"></script>
+    <script src="{% static 'nodejs/node_modules/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'nodejs/node_modules/pace-progress/pace.min.js' %}"></script>
+    <script src="{% static 'nodejs/node_modules/perfect-scrollbar/dist/perfect-scrollbar.min.js' %}"></script>
+    <script src="{% static 'nodejs/node_modules/@coreui/coreui/dist/js/coreui.min.js' %}"></script>
+  <!-- Js file -->
+  <!-- <script src="{% static 'js/login.js' %}"></script> -->
+  </body>
+
+</html>

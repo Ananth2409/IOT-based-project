@@ -1,0 +1,118 @@
+<!--
+			<div class="ngdialog-message">
+				<h2>Native Angular.js solution</h2>
+				<div>With ngDialog you don't need jQuery or Bootstrap to create dialogs for <code>ng-app:</code></div>
+				<ul class="mt">
+					<li>Use it in controllers, factories or directives</li>
+					<li>Create your own directives</li>
+					<li>Style all UI and templates</li>
+					<li>Configure themes</li>
+					<li>Add animations and effects</li>
+				</ul>
+				<div class="mt">Module is shipped with both <code>ngDialog</code> service and default directive.</div>
+			</div>
+			<div class="ngdialog-buttons mt">
+				<button type="button" class="ngdialog-button ngdialog-button-primary" ng-click="next()">►</button>
+			</div>
+-->
+<!--
+ <div class="col-md-12"  ng-controller="projectCtrl"  >
+                    
+    <div class="card">
+        <div class="card-header">
+            <strong>Add Project</strong>
+        </div>
+        <div class="card-body">
+            <form class="form-horizontal" action="javascript:void(0)" method="post">
+                <div class = "form-group row">
+                    <label class="col-md-4 col-form-label" for = "Project Name"  >Project Name  </label>
+                    <div class="col-md-7">
+                        <input type = "text" placeholder = "Project Name" ng-model = "project.project_name" ng-blur="dialogClose(project.project_name)" required="" >
+                        <p style="color:red">{$ project.validateProject $}</p>
+                    </div>
+                </div>
+                <div class = "form-group row">
+                    <label class="col-md-4 col-form-label" for = "Description"  >Description  </label>
+                    <div class="col-md-7">
+                        <input type="text" placeholder="Description" ng-model="project.description">
+                    </div>
+                </div>
+                    
+            <input type="button" class="btn btn-primary;ngdialog-button" value="Create" ng-click="savePost()">
+            </form>
+        </div>
+    </div>
+</div> 
+-->
+<!--
+ <div class="modal fade" id="smallModal"  role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Add Project</h4>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class = "form-group row">
+                    <label class="col-md-3 col-form-label" for = "Project Name"  >Project Name  </label>
+                    <div class="col-md-7">
+                        <input type = "text" class="form-control" placeholder = "Project Name" ng-model = "project.project_name" ng-blur="dialogClose(project.project_name)" required="" >
+                        <p style="color:red">{$ project.validateProject $}</p>
+                    </div>
+                </div>
+                <div class = "form-group row">
+                    <label class="col-md-3 col-form-label" for = "Description"  >Description  </label>
+                    <div class="col-md-7">
+                        <input type="text"class="form-control"   placeholder="Description" ng-model="project.description">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">Close</button>
+                <button  class="dele" type="button" ng-click="savePost()">Create</button>
+            </div>
+        </div>
+                
+    </div> 
+              
+</div>
+-->
+<div>
+<h1>project html code here</h1>
+</div>
+<!--                  
+<div class="ngdialog-message">
+    <form action="/action_page.php">
+  First name:<br>
+  <input type="text" name="firstname" value="Mickey">
+  <br>
+  Last name:<br>
+  <input type="text" name="lastname" value="Mouse">
+  <br><br>
+  <input type="submit" value="Submit">
+</form> 
+</div>
+-->
+
+</div class = "modal fade" id="confirmDelete" tabindex="0" role="dialog" aria-labelledby="myModalLabel1" aria-hidden="false">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+
+          <div class="modal-header">
+              <h4>Confirm Delete</h4>
+          </div>
+
+          <div class="modal-body">
+              <p>Are you sure want to delete this ?</p>
+          </div>
+
+          <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">No</button>
+          <button  class="btn btn-primary"  type="button" ng-click="">Yes</button>
+          </div>
+
+        </div>
+    </div>
+<div>
